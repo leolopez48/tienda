@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Venta de repuestos</title>
+
+    <!-- Font Awesome JS -->
+    <font face="arial">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+      <link href="../../tienda/css/mdb.min.css" rel="stylesheet">
+        <link href="../../tienda/css/bootstrap.min.css" rel="stylesheet">
+          <link rel="stylesheet" href="../../tienda/css/sweetalert2.min.css">
+  <script src="../../tienda/js/popper.min.js"></script>
+
+    <script type="text/javascript">
+
+        function login(){       
+            if(document.getElementById('correo').value == 'pedrocastillo6@gmail.com' && document.getElementById('password').value == 'castillo1234'){
+                window.location="Inicio.html";
+            }else{
+                            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Los datos ingresados son incorrectos.',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            }
+        }
+    </script>
+
+      <style>
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
+    @media (min-width: 560px) and (max-width: 740px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 650px;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+      html,
+      body,
+      header,
+      .view  {
+        height: 650px;
+      }
+    }
+  </style>
+</head>
+
+<body class="rgba-stylish-strong">
+    <!-- Intro Section -->
+      <div class=" mask h-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-5">
+
+              <!-- Form with header -->
+              <div class="card wow fadeIn animated" data-wow-delay="0.3s">
+                <div class="card-body">
+
+                  <!-- Header -->
+                  <div class="form-header" style="background-image:  linear-gradient(to right, rgba(248,118,58,1) 0%, rgba(202,93,50,1) 34%, rgba(243,223,42,1) 89%, rgba(243,223,42,1) 100%);" >
+                    <h3 class="font-weight-500 my-2 py-1" ><i class="fas fa-user"></i> Iniciar sesión</h3>
+                  </div>
+
+                  <!-- Body -->
+                  <div class="text-center" style="padding-bottom: 2%">
+                    <img src="../../tienda/img/logo.jpg">
+                    <h5 style="color: #616060">¡Calidad a tu alcance!</h5>
+                  </div>
+                  <div class="md-form">
+                    <i class="fas fa-envelope prefix black-text"></i>
+                    <input type="text" id="correo" class="form-control">
+                    <label for="correo">Tu correo</label>
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-lock prefix black-text"></i>
+                    <input type="password" id="password" class="form-control">
+                    <label for="password">Tu contraseña</label>
+                  </div>
+
+                  <div class="text-center">
+                    <button class="btn btn-lg" style="background-image:  linear-gradient(to right, rgba(248,118,58,1) 0%, rgba(202,93,50,1) 34%, rgba(243,223,42,1) 89%, rgba(243,223,42,1) 100%);" onclick="login();">Iniciar sesión</button>
+                    <!--<hr class="mt-4">
+                    <div class="inline-ul text-center d-flex justify-content-center">
+                      <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter white-text"></i></a>
+                      <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in white-text"> </i></a>
+                      <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram white-text"> </i></a>
+                    </div>-->
+                  </div>
+
+                </div>
+              </div>
+              <!-- Form with header -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Intro Section -->
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <!--<script src="themes/switch/theamswitcher.js" type="text/javascript" charset="utf-8"></script>-->
+      <script type="text/javascript" src="../../tienda/js/mdb.js"></script>
+        <script type="text/javascript" src="../../tienda/js/jquery-3.4.1.min.js"></script>
+        <script src="../../tienda/js/sweetalert2.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../../tienda/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../../tienda/js/bootstrap.min.js"></script>
+
+    <script>
+
+    new WOW().init();
+
+  </script>
+</body>
+
+
+</html>
