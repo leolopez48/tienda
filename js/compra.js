@@ -44,7 +44,7 @@ function procesarCompra(e){
     if(compra.obtenerProductosLocalStorage().length === 0){
         Swal.fire({
             type: 'error',
-            title: 'Oops...',
+            title: '¡Error!',
             text: 'No hay productos, selecciona alguno',
             showConfirmButton: false,
             timer: 2000
@@ -55,7 +55,7 @@ function procesarCompra(e){
     else if(cliente.value === '' || correo.value === ''){
         Swal.fire({
             type: 'error',
-            title: 'Oops...',
+            title: '¡Error!',
             text: 'Ingrese todos los campos requeridos',
             showConfirmButton: false,
             timer: 2000

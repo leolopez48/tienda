@@ -10,11 +10,12 @@
   <font face="arial">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="../../tienda/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="../../tienda/css/mdb.min.css">
-  <link rel="stylesheet" href="../../tienda/css/sweetalert2.min.css">
-  <script src="../../tienda/js/popper.min.js"></script>
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
+  <script src="js/popper.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
   <!-- Your custom styles (optional) -->
   <style>
     .th{
@@ -28,6 +29,16 @@
         padding: 5%;
       }
 
+    .avatar {
+    /* Aquí establecemos el tamaño del avatar, puedes poner los valores que quieras */
+    height: 100px;
+    width: 100px;
+    /* Éstos valores no los tienes que cambiar ya que son en base a proporción */
+    background-repeat: no-repeat; /*Para que la imagen no se repita */
+    border-radius: 100%;
+    background-size: 100% auto; /*Hace que la imagen ocupe todo el contenedor*/
+}
+
   </style>
 </head>
 
@@ -38,13 +49,15 @@
 
     <!-- Sidebar navigation -->
     <!--style="background-image:  linear-gradient(to bottom, rgba(248,118,58,1) 0%, rgba(202,93,50,1) 34%, rgba(243,223,42,1) 89%, rgba(243,223,42,1) 100%);"-->
-    <div id="slide-out" class="side-nav fixed">
+    <div id="slide-out" class="side-nav fixed" style="background-color: #C23234">
       <ul class="custom-scrollbar">
         <!-- Logo -->
-        <li class="logo-sn waves-effect" style="height: 80px; padding-top: 2%">
-          <div class="text-center">
-            <a href="#" class="pl-0"><img src="..\..\tienda\img\logo1.jpeg"></a>
-          </div>
+        <li class=" waves-effect" style="height: 120px; padding-top: 2%;">       
+              <div class="container text-center" style="height: 110px; width: 110px; border-radius: 100%; background-color: #fff; padding-right: 50%; padding-top: 6%; padding-left: 0px; padding-right: 0px">
+                  <div class="container" style="padding-left: 6px; padding-top: 8px">
+                    <div class="avatar py-4" style="background-image: url(img/logo.jpeg);"></div>
+                  </div>
+              </div>
         </li>
         <!-- Logo -->
         <!-- Side navigation links -->
@@ -52,23 +65,23 @@
           <ul class="collapsible collapsible-accordion">
               <ul class="list-unstyled components">
                 <li style="background-color: #f6f6f6">
-                    <a href="Inicio.html" style="color: #060606"><img src="../../tienda/img/home.png"> Inicio</a>
+                    <a href="Inicio.html" style="color: #060606"><img src="img/home.png" style="width: 12%; height: auto;"> Inicio</a>
                 </li>
                 <li>
-                    <a class="waves-effect" href="compra.html"><img src="../../tienda/img/cart.png"> Mi carrito</a>
+                    <a class="waves-effect" href="compra.html" style="color: #FFF"><img src="img/cart.png" style="width: 12%; height: auto;"> Mi carrito</a>
                 </li>
                 <li>
-                    <a class="waves-effect" href="nosotros.html"><img src="../../tienda/img/us.png"> Sobre nosotros</a>
+                    <a class="waves-effect" href="nosotros.html" style="color: #FFF"><img src="img/us.png" style="width: 12%; height: auto"> Sobre nosotros</a>
                 </li>
                 <li>
-                    <a class="waves-effect" href="index.html"><img src="../../tienda/img/logout.png"> Cerrar sesión</a>
+                    <a class="waves-effect" href="index.html" style="color: #FFF"><img src="img/logout.png" style="width: 12%; height: auto"> Cerrar sesión</a>
                 </li>
 
           </ul>
         </li>
         <!-- Side navigation links -->
       </ul>
-      <div class="sidenav-bg mask-strong"></div>
+      <div class="sidenav"></div>
     </div>
     <!-- Sidebar navigation -->
 
@@ -80,7 +93,7 @@
       </div>
       <!-- Breadcrumb-->
       <div class="breadcrumb-dn mr-auto">
-        <p>Repuestos y accesorios</p>
+        <p style="color: #000000">Repuestos y accesorios</p>
       </div>
 
       <!--Navbar links-->
@@ -90,30 +103,31 @@
         <li class="nav-item dropdown notifications-nav">
           <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i><img src="../../tienda/img/productos24.png"></i>
+            <i><img src="img/productos24.png" style="width: 30px; height: auto"></i>
             <span class="d-none d-md-inline-block">Nuestros productos</span>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="width: 100px; left: 70px">
-              <a href="alternadores.html" class="dropdown-item">Alternadores</a>
-              <a href="carburadores.html" class="dropdown-item">Carburadores</a>
-              <a href="clutch.html" class="dropdown-item">Prensas de Clutch</a>
-              <a href="frenos.html" class="dropdown-item">Pastillas de frenos</a>
-              <a href="partes.html" class="dropdown-item">Partes eléctricas</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="width: 100px; left: 70px; background-color: #C23234">
+              <a href="alternadores.html" class="dropdown-item" style="color: #FFF">Alternadores</a>
+              <a href="accesorios.html" class="dropdown-item" style="color: #FFF">Accesorios</a>
+              <a href="alarmas.html" class="dropdown-item" style="color: #FFF">Alarmas</a>
+              <a href="audio.html" class="dropdown-item" style="color: #FFF">Audio</a>
+              <a href="luces.html" class="dropdown-item" style="color: #FFF">Luces</a>
+              <a href="4x4.html" class="dropdown-item" style="color: #FFF">Accesorios 4x4</a>
           </div>
         </li>
         <li class="nav-item dropdown notifications-nav">
             <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i ><img src="../../tienda/img/cart.png"></i><span class="clearfix d-none d-sm-inline-block">Mi Carrito</span></a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" id="carrito" style="left: -30px; width: 290px" >
+            <i ><img src="img/cart.png" style="width: 27px; height: auto"></i><span class="clearfix d-none d-sm-inline-block">  Mi Carrito</span></a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" id="carrito" style="left: -30px; width: 290px;background-color: #C23234" >
                 <table id="lista-carrito" class="table" style="width: 98%">
-                    <thead>
-                         <tr>
-                            <th>Imagen</th>
-                            <th>Nombre</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
+                    <!-- <thead> -->
+                         <!-- <tr> -->
+                            <!-- <th style="color: #FFF;">Producto</th> -->
+                            <!-- <th style="color: #FFF;">Nombre</th>
+                            <th style="color: #FFF;">Precio</th> -->
+                        <!--</ tr>
+                    </thead> -->
                     <tbody></tbody>
                 </table>
                 <a href="#" id="vaciar-carrito" class="btn btn-light-green btn-block waves-effect" style="width: 96%">Vaciar carrito</a>
@@ -123,11 +137,11 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i><img width="26px" height="26px" src="../../tienda/img/pedro-castillo.png"></i> <span class="clearfix d-none d-sm-inline-block">Pedro Castillo</span></a>
+            <i><img width="30px" height="30px" src="img/pedro-castillo.png" style="border-radius:150px;"></i> <span class="clearfix d-none d-sm-inline-block">Pedro Castillo</span></a>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="usuario.html">Editar Perfil</a>
-            <a class="dropdown-item" href="index.html">Cerrar sesión</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown" style="background-color: #C23234">
+            <a class="dropdown-item" href="usuario.html" style="color: #FFF">Editar Perfil</a>
+            <a class="dropdown-item" href="index.html" style="color: #FFF">Cerrar sesión</a>
           </div>
         </li>
 
@@ -144,71 +158,38 @@
           <h1 class="display-4 mt-4">Lista de Productos</h1>
           <p class="lead">Selecciona uno de nuestros productos</p>
         </div>
-              <!-- Grid Categorias -->
-                <div class="container">
-          <h1 class="text-center">Categorías</h1>
-          <div class="row" style="flex-direction: row; -webkit-box-orient: horizontal">
-          <div class="col" style="width: 50%">
-              <div class="card-deck">
-                <div class="card text-center">
-                      <h8 style="padding-top: 2%; color: black; font-size: 15px" >Alternadores</h8>
-                      <a href="alternadores.html"><img src="../../tienda/img/acer.jpg" width="100%"></a>
-                </div>
-                <div class="card text-center">
-                    <h6 style="padding-top: 2%; color: black; font-size: 14px">Carburadores</h6>
-                    <a href="carburadores.html"><img src="../../tienda/img/acer.jpg" width="100%"></a>
-                  </div>
-                                    <div class="card text-center">
-                      <h6 style="padding-top: 2%; color: black; font-size: 15px">Eléctricos</h6>
-                      <a href="clutch.html"><img src="../../tienda/img/acer.jpg" width="100%"></a>
-                  </div>
-              </div>
-          </div>
-          <div class="col" style="width: 50%">
-              <div class="card-deck">
-                <div class="card text-center">
-                    <h6 style="padding-top: 2%; color: black; font-size: 15px">Clutch</h6>
-                    <a href="clutch.html"><img src="../../tienda/img/acer.jpg" width="100%"></a>
-                </div>
-                <div class="card text-center">
-                    <h6 style="padding-top: 2%; color: black; font-size: 15px">Frenos</h6>
-                    <a href="frenos.html"><img src="../../tienda/img/acer.jpg" width="100%"></a>
-                </div>
-                                  <div class="card text-center">
-                      <h6 style="padding-top: 2%; color: black; font-size: 15px">Top ventas</h6>
-                      <a href="#productos"><img src="../../tienda/img/acer.jpg" width="100%"></a>
-                  </div>
-              </div>
-          </div>
-        </div>
-      </div>
-      <!-- Fin de categorias -->
-      <!-- PRODUCTOS -->
+              <!-- PRODUCTOS -->
       <ul id="productos"></ul>
               <ul></ul>
               <div class="container" id="lista-productos">
             <div class="col-md-12" align="center">
-                <div class="row border rounded" style="background-color: #f5f5f5">
-                    <h4 style="padding-top: 2%; padding-left: 2%"><img src="../../tienda/img/hot.png"> Lo más vendido</h4>
+                <div class="row border rounded" style="background-color: #f5f5f5" >
+                    <h4 style="padding-top: 2%; padding-left: 2%;color: #000000"><img src="img/hot.png" > Lo más vendido</h4>
                     <div id="carousel" class="carousel slide container-fluid rounded" data-ride="carousel" style="background-color: #f5f5f5; height: 450px">
                       <div class="carousel-inner" align="center">
                         <div class="column-fluid">
                           <div class="carousel-item active" data-interval="4000" style="height: 425px;">
                             <div class="card shadow-sm" style="width: 90%">
                               <div class="card-title">
-                                <h4 class="my-0 font-weight-bold" style="padding-top: 2%">Cámara </h4>
+                                <h4 class="my-0 font-weight-bold" style="padding-top: 2%; color: #000000">Barra LED 24W </h4>
                               </div>
                                   <div>
                                 <div class="container">
-                                  <img class="wow fadeIn animated" src="../../tienda/img/5.jpg" height="150">
+                                  <img class="wow fadeIn animated" src="img/3.jpg" style="height: 120px">
                                 </div>
-                                <h1 class="card-title pricing-card-title precio" >$ <span class="">300.00</span></h1>
-                                <ul class="list-unstyled">
-                                <li></li>
-                                <li>16 GB RAM</li>
-                                <li>COLOR NEGRO</li>
-                                <li>2 TB DD</li>
+                                <h1 class="card-title pricing-card-title precio font-weight-bold" style="color: #000000">$ <span class="">25.00</span></h1>
+                                <ul class="list-unstyled" style="color: #000000">
+                                10-110V 24 W
+                                <br>- Color disponible: Blanco
                                 </ul>
+                                <div class="row-fluid">
+                          <div class="container">
+                          <div class="col-md-3 pb-3" style="display: inline-flex;">
+                            <label style="color: #000">Cantidad: </label>
+                            <input type="number" class="form-control cantidad" min="1" value="1" id="cantidad">
+                          </div>
+                        </div>
+                        </div>
                                   <a href="" class="btn btn-primary agregar-carrito" data-id="22">Comprar</a>
                               </div>
                             </div>
@@ -217,50 +198,61 @@
                             <div class="carousel-item" data-interval="4000" align="center" style="height: 425px; padding-bottom: 2%">
                             <div class="card shadow-sm" style="width: 90%">
                               <div class="card-title">
-                                <h4 class="my-0 font-weight-bold" style="padding-top: 2%">Cámara </h4>
+                                <h4 class="my-0 font-weight-bold" style="padding-top: 2%; color: #000000" >Timón deportivo </h4>
                               </div>
                                   <div>
                                 <div class="container">
-                                  <img class="wow fadeIn animated" src="../../tienda/img/5.jpg" height="150">
+                                  <img class="wow fadeIn animated" src="img/8.jpg" style="height: 120px">
                                 </div>
-                                <h1 class="card-title pricing-card-title precio">$ <span class="">300.00</span></h1>
-                                <ul class="list-unstyled">
-                                <li></li>
-                                <li>16 GB RAM</li>
-                                <li>COLOR NEGRO</li>
-                                <li>1 TB DD</li>
+                                <h1 class="card-title pricing-card-title precio font-weight-bold" style="color: #000000">$ <span class="">60.00</span></h1>
+                                <ul class="list-unstyled" style="color: #000000">
+                                - Forro plástico resistente a golpes y salpicaduras de líquidos
                                 </ul>
+                                <div class="row-fluid">
+                          <div class="container">
+                          <div class="col-md-3 pb-3" style="display: inline-flex;">
+                            <label style="color: #000">Cantidad: </label>
+                            <input type="number" class="form-control cantidad" min="1" value="1" id="cantidad">
+                          </div>
+                        </div>
+                        </div>
                                   <a href="" class="btn btn-primary agregar-carrito" data-id="23">Comprar</a>
                               </div>
                             </div>                            
                           </div>
-                            <div class="carousel-item" data-interval="4000" align="center" style="height: 425px;">
-                            <div class="card shadow-sm" style="width: 90%">
-                              <div class="card-title">
-                                <h4 class="my-0 font-weight-bold" style="padding-top: 2%">Cámara </h4>
-                              </div>
+<!--                             <div class="carousel-item" data-interval="4000" align="center" style="height: 425px;">
+                              <div class="card shadow-sm" style="width: 90%">
+                                <div class="card-title">
+                                  <h4 class="my-0 font-weight-bold" style="padding-top: 2%; color: #000000">Emblema </h4>
+                                </div>
                                   <div>
                                 <div class="container">
-                                  <img class="wow fadeIn animated" src="../../tienda/img/5.jpg" height="150">
+                                  <img class="wow fadeIn animated" src="img/21.jpg" style="height: 120px">
                                 </div>
-                                <h1 class="card-title pricing-card-title precio">$ <span class="">300.00</span></h1>
-                                <ul class="list-unstyled">
+                                <h1 class="card-title pricing-card-title precio font-weight-bold" style="color: #000000">$ <span class="">30.00</span></h1>
+                                <ul class="list-unstyled" style="color: #000000">
                                 <li></li>
-                                <li>16 GB RAM</li>
-                                <li>COLOR NEGRO</li>
-                                <li>1 TB DD</li>
+                                                                <br>- Material metálico
                                 </ul>
+                                <div class="row-fluid">
+                          <div class="container">
+                          <div class="col-md-3 pb-3" style="display: inline-flex;">
+                            <label style="color: #000">Cantidad: </label>
+                            <input type="number" class="form-control cantidad" min="1" value="1" id="cantidad">
+                          </div>
+                        </div>
+                        </div>
                                   <a href="" class="btn btn-primary agregar-carrito" data-id="24">Comprar</a>
                               </div>
                             </div>
-                            </div>
+                            </div> -->
                           
                           <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                            <span aria-hidden="true"><img src="../../tienda/img/left.png"></span>
+                            <span aria-hidden="true"><img src="img/left.png"></span>
                             <span class="sr-only">Previous</span>
                           </a>
                           <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                            <span aria-hidden="true"><img src="../../tienda/img/right.png"></span>
+                            <span aria-hidden="true"><img src="img/right.png"></span>
                             <span class="sr-only">Next</span>
                           </a>
                       </div>
@@ -272,6 +264,56 @@
       <!-- Fin de carousel -->
       <!-- FIN DE PRODUCTOS -->
     </div>
+              <!-- Grid Categorias -->
+                <div class="container">
+          <h1 class="text-center">Categorías</h1>
+          <div class="row" style="flex-direction: row; -webkit-box-orient: horizontal">
+          <div class="col" style="width: 50%">
+              <div class="card-deck">
+                <div class="card text-center">
+                      <h8 style="padding-top: 2%; color: black; font-size: 15px" >Audio</h8>
+                      <a href="audio.html"><img src="img/audio.jpg" width="100%"></a>
+                </div>
+                <div class="card text-center">
+                    <h6 style="padding-top: 2%; color: black; font-size: 14px">Accesorios</h6>
+                    <a href="accesorios.html"><img src="img/accesorios.jpg" width="100%"></a>
+                  </div>
+                  <div class="card text-center">
+                    <h6 style="padding-top: 2%; color: black; font-size: 15px">Alternadores</h6>
+                    <a href="alternadores.html"><img src="img/25.jpg" width="100%"></a>
+                </div>
+                  <!--<div class="card text-center">
+                      <h6 style="padding-top: 2%; color: black; font-size: 15px">Accesorios</h6>
+                      <a href="clutch.html"><img src="img/acer.jpg" width="100%"></a>
+                  </div>-->
+              </div>
+          </div>
+          <div class="col" style="width: 50%">
+              <div class="card-deck">
+                <div class="card text-center">
+                    <h6 style="padding-top: 2%; color: black; font-size: 15px">Alarmas</h6>
+                    <a href="alarmas.html"><img src="img/alarmas.jpg" width="100%"></a>
+                </div>
+                <div class="card text-center">
+                    <h6 style="padding-top: 2%; color: black; font-size: 15px">Luces</h6>
+                    <a href="luces.html"><img src="img/luces.jpg" width="100%"></a>
+                </div>
+                <div class="card text-center">
+                    <h6 style="padding-top: 2%; color: black; font-size: 15px">Accesorios 4x4</h6>
+                    <a href="4x4.html"><img src="img/accesorios.jpg" width="100%"></a>
+                </div>
+                <!--<div class="card text-center" style="background-color: transparent; border: 0px; box-shadow:  0px 0px 0px">
+                    <a href="detalle4.html" style="display: none">
+                      <h6 style="padding-top: 2%; padding-left: 2%; font-size: 18px; color: black;" >Alternadores</h6>
+                    <img src="img/acer.jpg" width="100%">
+                    </a>
+                </div>-->
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin de categorias -->
+
   </main>
   <!-- Main layout -->
   <!-- Footer -->
@@ -296,10 +338,10 @@
                     <div id="socialMedia" class="col-md-3" style="padding-bottom: 3%">
                         <br>
                         <h6 style="color: #ccc">REDES SOCIALES </h6>
-                        <a href="#"><img width="60" height="60" src="..\..\tienda\img\facebook.png" title="facebook" alt="facebook"/></a>
-                        <a href="#"><img width="60" height="60" src="..\..\tienda\img\twitter.png" title="twitter" alt="twitter"/></a>
-                        <a href="#"><img width="60" height="60" src="..\..\tienda\img\youtube.png" title="youtube" alt="youtube"/></a>
-                    </div> 
+                        <a href="https://www.facebook.com/Repuestos-y-Accesorios-JP-107869600657550/"><img width="60" height="60" src="img\facebook.png" title="facebook" alt="facebook"/></a>
+                        <a href="https://api.whatsapp.com/send?phone=50377403299&text=Hola!%20Tengo%20una%20consulta!" title="Whatsapp" alt="Whatsapp"><img src="img/whatsapp.png" width="60" height="60"></a>
+                        <a href="https://www.instagram.com/repuestosyaccesoriosjp/"><img width="55" height="55" src="img\instagram.png" title="Instagram" alt="Instagram"/></a>
+                    </div>
                 </div>
                 </div>
   </footer>
@@ -307,13 +349,13 @@
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
-  <script src="../../tienda/js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="../../tienda/js/popper.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="../../tienda/js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="../../tienda/js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
   <!--Custom scripts-->
   <script>
     // SideNav Initialization
@@ -328,10 +370,10 @@
 
   </script>
           <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="../../tienda/js/index.js"></script>
-        <script src="../../tienda/js/sweetalert2.min.js"></script>
-        <script src="../../tienda/js/carrito.js"></script>
-        <script src="../../tienda/js/pedido.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/sweetalert2.min.js"></script>
+        <script src="js/carrito.js"></script>
+        <script src="js/pedido.js"></script>
 </body>
 
 </html>

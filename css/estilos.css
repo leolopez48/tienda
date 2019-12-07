@@ -1,0 +1,9 @@
+    body {
+      background-image: url("../../tienda/img/fondo.jpg");
+      background-size: 100% auto;
+
+    }
+
+    th, h2, label, h1, p, ul, h4{
+      color: #FFF;
+    }

@@ -12,20 +12,21 @@
     <font face="arial">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
-      <link href="../../tienda/css/mdb.min.css" rel="stylesheet">
-        <link href="../../tienda/css/bootstrap.min.css" rel="stylesheet">
-          <link rel="stylesheet" href="../../tienda/css/sweetalert2.min.css">
-  <script src="../../tienda/js/popper.min.js"></script>
+      <link href="css/mdb.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+          <link rel="stylesheet" href="css/sweetalert2.min.css">
+  <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
     <script type="text/javascript">
 
         function login(){       
-            if(document.getElementById('correo').value == 'pedrocastillo6@gmail.com' && document.getElementById('password').value == 'castillo1234'){
+            if(document.getElementById('correo').value == 'admin@gmail.com' && document.getElementById('password').value == 'admin'){
                 window.location="Inicio.html";
             }else{
                             Swal.fire({
                 type: 'error',
-                title: 'Oops...',
+                title: '¡Error!',
                 text: 'Los datos ingresados son incorrectos.',
                 showConfirmButton: false,
                 timer: 1500
@@ -78,7 +79,7 @@
 
                   <!-- Body -->
                   <div class="text-center" style="padding-bottom: 2%">
-                    <img src="../../tienda/img/logo.jpg">
+                    <img src="img/logo.jpeg" style="max-width: 100%; height: auto">
                     <h5 style="color: #616060">¡Calidad a tu alcance!</h5>
                   </div>
                   <div class="md-form">
@@ -115,13 +116,13 @@
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <!--<script src="themes/switch/theamswitcher.js" type="text/javascript" charset="utf-8"></script>-->
-      <script type="text/javascript" src="../../tienda/js/mdb.js"></script>
-        <script type="text/javascript" src="../../tienda/js/jquery-3.4.1.min.js"></script>
-        <script src="../../tienda/js/sweetalert2.min.js"></script>
+      <script type="text/javascript" src="js/mdb.js"></script>
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/sweetalert2.min.js"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="../../tienda/js/popper.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="../../tienda/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <script>
 

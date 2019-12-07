@@ -18,7 +18,7 @@ class Carrito {
             titulo: producto.querySelector('h4').textContent,
             precio: producto.querySelector('.precio span').textContent,
             id: producto.querySelector('a').getAttribute('data-id'),
-            cantidad: 1
+            cantidad: document.getElementById('cantidad').value
         }
         let productosLS;
         productosLS = this.obtenerProductosLocalStorage();
@@ -31,7 +31,7 @@ class Carrito {
         if(productosLS === infoProducto.id){
             Swal.fire({
                 type: 'info',
-                title: 'Oops...',
+                title: '',
                 text: 'El producto ya está agregado',
                 showConfirmButton: false,
                 timer: 1000
@@ -47,14 +47,15 @@ class Carrito {
     insertarCarrito(producto){
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>
-                <img src="${producto.imagen}" width=100>
+            <td width="10%">
+                <img src="${producto.imagen}" width=60px style="border-radius: 15%">
             </td>
-            <td>${producto.titulo}</td>
-            <td>${producto.precio}</td>
-            <!--<td>
-                <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
-            </td>-->
+                <td style="color: #FFF; font-size: 13px; width=90%"><p style="color: #FFF; height: 5px">${producto.titulo}</p><p style="color: #FFF; height: 5px">Precio: $${producto.precio}</p><p style="color: #FFF; height: 5px">Cantidad: ${producto.cantidad}</p><p class="py-0" style="color: #FFF; padding: 0%; height: 0px">Subtotal: $${producto.precio*producto.cantidad}</td>
+                <!--<td style="color: #FFF; font-size: 13px">$${producto.precio}</td>-->
+                <!--<td styl    e="color: #FFF; font-size: 13px">${producto.cantidad}</td>-->
+                <!--<td>
+                    <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
+                </td>-->
         `;
             Swal.fire({
                 type: 'info',
@@ -65,7 +66,7 @@ class Carrito {
             })
         listaProductos.appendChild(row);
         this.guardarProductosLocalStorage(producto);
-
+        document.getElementById('cantidad').value = 1;
     }
 
     //Eliminar el producto del carrito en el DOM
@@ -78,7 +79,7 @@ class Carrito {
             productoID = producto.querySelector('a').getAttribute('data-id');
             Swal.fire({
                 type: 'info',
-                title: 'Oops...',
+                title: '',
                 text: 'El producto se ha eliminado',
                 showConfirmButton: false,
                 timer: 1000
@@ -140,11 +141,12 @@ class Carrito {
             //Construir plantilla
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>
-                    <img src="${producto.imagen}" width=100>
-                </td>
-                <td>${producto.titulo}</td>
-                <td>${producto.precio}</td>
+                <td width="10%">
+                <img src="${producto.imagen}" width=60px style="border-radius: 15%">
+            </td>
+                <td style="color: #FFF; font-size: 13px; width=90%"><p style="color: #FFF; height: 5px">${producto.titulo}</p><p style="color: #FFF; height: 5px">Precio: $${producto.precio}</p><p style="color: #FFF; height: 5px">Cantidad: ${producto.cantidad}</p><p class="py-0" style="color: #FFF; padding: 0%; height: 0px">Subtotal: $${producto.precio*producto.cantidad}</td>
+                <!--<td style="color: #FFF; font-size: 13px">$${producto.precio}</td>-->
+                <!--<td style="color: #FFF; font-size: 13px">${producto.cantidad}</td>-->
                 <!--<td>
                     <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
                 </td>-->
@@ -161,17 +163,17 @@ class Carrito {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>
-                    <img src="${producto.imagen}" width=100>
+                    <img src="${producto.imagen}" width=50>
                 </td>
-                <td>${producto.titulo}</td>
-                <td>${producto.precio}</td>
-                <!--<td>
+                <td style="color: #FFF; font-size: 11px">${producto.titulo} <p class="font-weight-bold" style="font-size: 15px; color:yellow">$${producto.precio}</p></td>
+                <!--<td style="color: #FFF;"">${producto.precio}</td>-->
+                <td>
                     <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
-                </td>-->
-                <!--<td id='subtotales'>${producto.precio * producto.cantidad}</td>-->
-                <!--<td>
-                    <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
-                </td>-->
+                </td>
+                <td id='subtotales' style="color: #FFF;font-size: 12px">$${producto.precio*producto.cantidad}</td>
+                <td>
+                    <a href="#" class="borrar-producto fas fa-times-circle" style=";font-size:35px; background-color: #FFF;border-radius: 100%;" data-id="${producto.id}"></a>
+                </td>
             `;
             listaCompra.appendChild(row);
         });
@@ -205,7 +207,7 @@ class Carrito {
         if(this.obtenerProductosLocalStorage().length === 0){
             Swal.fire({
                 type: 'error',
-                title: 'Oops...',
+                title: '¡Error!',
                 text: 'El carrito está vacío, agrega algún producto',
                 showConfirmButton: false,
                 timer: 2000
@@ -232,7 +234,7 @@ class Carrito {
 
         //document.getElementById('subtotal').innerHTML = "$ " + subtotal;
         //document.getElementById('igv').innerHTML = "$ " + igv;
-        document.getElementById('total').innerHTML = "$ " + total.toFixed(2);
+        document.getElementById('total').innerHTML = "$" + total.toFixed(2);
     }
 
     obtenerEvento(e) {
